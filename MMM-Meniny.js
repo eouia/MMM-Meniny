@@ -386,7 +386,8 @@ Module.register("MMM-Meniny", {
 
   refresh: function() {
     this.updateDom()
-    var remainMs = moment().add(1, "days").format("x") - moment().format("x")
+    //var remainMs = moment().add(1, "days").format("x") - moment().format("x")
+    var remainMs = 1000 * 60
     var timer = setTimeout(function() {
       this.refresh()
     }, remainMs)
