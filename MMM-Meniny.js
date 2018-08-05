@@ -367,6 +367,10 @@ const meniny = {
   "1229": "Milada",
   "1230": "Dávid",
   "1231": "Silvester",
+  "0101": "Nový Rok",
+  "0229": "Radomír",
+  "0501": "Sviatok práce",
+  "1225": "1. Sviatok Vianočný",
 }
 
 
@@ -388,14 +392,9 @@ Module.register("MMM-Meniny", {
     this.updateDom()
     //var remainMs = moment().add(1, "days").format("x") - moment().format("x")
     var remainMs = 1000 * 60
-<<<<<<< HEAD
     var self = this
     var timer = setTimeout(()=> {
       self.refresh()
-=======
-    var timer = setTimeout(function() {
-      this.refresh()
->>>>>>> 3735c9e2fb71be5e195aadb0dfc1272721443a8e
     }, remainMs)
   },
 
