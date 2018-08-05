@@ -386,21 +386,25 @@ Module.register("MMM-Meniny", {
 
   refresh: function() {
     this.updateDom()
-    var remainMs = moment().add(1, "days").format("x") - moment().format("x")
-    var timer = setTimeout(function() {
-      this.refresh()
+    //var remainMs = moment().add(1, "days").format("x") - moment().format("x")
+    var remainMs = 1000 * 60
+    var self = this
+    var timer = setTimeout(()=> {
+      self.refresh()
     }, remainMs)
   },
 
   getDom: function() {
     var message = this.config.message
     var todayKey = moment().format("MMDD")
+    console.log(todayKey)
     var tomorrowKey = moment().add(1,'days').format("MMDD")
     var today = (typeof meniny[todayKey] !== "undefined") ? meniny[todayKey] : "undefined"
     var tomorrow = (typeof meniny[tomorrowKey] !== "undefined") ? meniny[tomorrowKey] : "undefined"
     message = message.replace("$TODAY$", today).replace("$TOMORROW$", tomorrow)
     var wrapper = document.createElement("div")
     wrapper.innerHTML = message
+
     return wrapper
   }
 })
