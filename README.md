@@ -19,7 +19,7 @@ git clone https://github.com/eouia/MMM-Meniny
 },
 ```
 
-I haven't fully test.
+I haven't fully tested it.
 
 ## Issues
 There are some undefined dates, like `01 Jan.`, I don't know Slovak calendar system, so I cannot define them. You'd better fulfill missed dates by yourself.
